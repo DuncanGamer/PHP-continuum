@@ -1,0 +1,494 @@
+body {
+
+    background-color: rgb(2, 1, 1);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    transition: .5s ease all;
+   
+    
+} 
+body.dark{
+    background: #e3e4e5;
+    
+}
+.switch{
+    background:orange;
+    border-radius: 1000px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff;
+}
+.switch::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 1000px;
+    transition: all .3s ease;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+
+}
+.active{
+    background: #343d5b;
+    color: #000000;
+
+}
+.active::after{
+    right: 0;
+    left: unset;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+body.dark a{
+    color:#1C1C1C
+}
+header {
+    padding-left: 50px;
+    display: flex;
+    background-image: url(../imagenes/equalizer-gf9e4df27e_640.png);
+     background-size: 100% 100%; 
+    height: 500px;
+    align-items: center;
+    box-sizing: border-box;
+    transition: .5s ease all;
+}
+body.dark header{
+    background-image: url(../imagenes/party.jpg);
+     background-size: 100% 100%; 
+     height: 700px;
+
+}
+ .title {
+    margin-right: 300px;
+    padding-top: 250px;
+} 
+
+h1 {
+    color: whitesmoke;
+   text-align: left;
+    padding: 0px;
+    font-size: 40px;
+    text-transform: uppercase;
+    transition: .5s ease all;
+}
+body.dark h1{
+    font-size: 30px;
+    margin-top: 300px;
+
+}
+
+.logo1{
+    width: 50px;
+    height: 50px;
+}
+
+.perfil{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#menu-horizontal{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+
+}
+.menu--container {
+   margin-top: 30px;
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    height: 70px;
+    background-color: #000000e0;
+    transition: .5s ease all;
+     }
+    body.dark .menu--container {
+        background-color: #e3e4e5f4;
+    }
+
+
+
+     #menu-horizontal {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 50px;
+       
+    
+   
+   
+ }
+
+ nav ul {
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    height: 100%;
+    list-style: none;
+    text-transform: uppercase;
+    
+    
+
+ }
+
+ nav ul li {
+padding: 0 20px 0 0;
+
+    
+ }
+
+ nav ul li a {
+    height: 100%;
+    width: 100%;  
+    font-size: 20px;
+  
+
+ } 
+ a:hover{
+    color: rgb(176, 176, 176);
+ }
+
+ #fa-solid-fa-bars{
+    display: none;
+ }
+  #fa-solid-fa-bars:checked ~ .container-menu-lateral{
+    opacity: 1;
+    visibility: visible;
+    
+ } 
+ #fa-solid-fa-bars:checked ~ .container-menu-lateral #menu-lateral{
+    transform: translateX(0%);
+ }
+ .container-menu-lateral{
+    color: whitesmoke;
+    position: absolute;
+    background: rgb(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#menu-lateral{
+    width: 100%;
+    max-width: 250px;
+    background: #1C1C1C;
+    height: 100vh;
+   
+     transition: all 700ms ease;
+     transform: translateX(-100%);  
+     position: fixed; 
+     border-radius: 10px;
+   }
+
+body.dark #menu-lateral{
+    background: #c7c7c7;
+}
+#menu-lateral a{
+    display: block;
+    padding: 20px;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+    font-size: 20px;
+}
+#menu-lateral label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+#menu-lateral a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+    
+
+}
+body.dark #menu-lateral a:hover{
+    background: #1f1f1f71;
+}
+.button_serch {
+    color: whitesmoke;
+    font-size: 20px;
+    position: absolute;
+    top: -30%;
+    right: -30%;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background-color: #FA5A3A;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.buscar {
+    position: absolute;
+    top: 0%;
+    right: 15%; 
+    /* padding: 15px; */
+}
+
+.buscar input {
+    width: 0px;
+    height: 30px;
+    padding: 0 5px;
+    font-size: 18px;
+    color: #000000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.5S ease;
+}
+
+.buscar:hover input {
+    width: 200px;
+}
+
+
+#logo {
+    justify-content: flex-start;
+    order: -1;
+}
+
+#logo img {
+    width: 250px;
+}
+
+
+main {
+
+    margin-right: 380px;
+    margin-left: 380px;
+    /* height: auto; */
+}
+
+
+h3 {
+    color: rgb(244, 236, 236);
+    margin-top: 50px;
+    font-size: 30px;
+    margin-left: 400px;
+    transition: .5s ease all;
+}
+body.dark h3{
+    color: #1f1f1f;
+}
+
+section {
+    padding: 0;
+    /* height: auto; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: .5s ease all;
+   }
+
+
+body.dark section{
+    background-color: #e3e4e5;
+}
+
+.concerts {
+    width: 300px;
+    height: 600px;
+    margin: 1em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1PX solid;
+    transition: all 500ms ease;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.488);
+}
+
+
+#post-1 {
+    background: url(../imagenes/Killers.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-2 {
+    background: url(../imagenes/Green-day.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-3 {
+    background: url(../imagenes/Adele.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-1b {
+    background: url(../imagenes/Bruce-sprinting.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-2b {
+    background: url(../imagenes/Airindie.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-3b {
+    background: url(../imagenes/Niall-Horan.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-4b {
+    background: url(../imagenes/Rock-festival.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-4 {
+
+    background: url(../imagenes/Bryan-Adams.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+
+}
+
+
+#post-5 {
+    background: url(../imagenes/Guns-n-roses.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+
+
+}
+
+#post-6 {
+
+    background: url(../imagenes/Beastieboys.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+
+}
+
+#post-7 {
+
+    background: url(../imagenes/Love-of-lesbian.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+}
+
+#post-8 {
+
+    background: url(../imagenes/Neon.png);
+    background-size: 100% 100%;
+    background-color:  rgb(2, 1, 1);
+    border-radius: 10px;
+  
+
+}
+
+.tex-artcle{
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    /* justify-content: center;
+        align-items: center; */
+    margin: 0;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    position:relative;
+    top: 100%;
+    transition: all .9s;
+
+
+}
+
+.concerts {
+    margin: 30px;
+}
+
+.concerts:hover p {
+    top: 87%;
+}
+
+.concerts:hover {
+    width: 350px;
+    height: 650px;
+   
+}
+
+
+
+
+footer {
+margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 500px;
+}
+footer p{
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 40px;
+    line-height: 50px;
+    word-spacing: 5px;
+    padding-top: 100px;
+}
+
